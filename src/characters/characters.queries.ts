@@ -1,0 +1,7 @@
+export const characterQueries = {
+    readCharacters: 'SELECT id AS characterId, name AS name, playerName AS playerName, height AS height, weight AS weight, backstory AS backstory, race AS race, class AS class, level AS level, strength AS strength, dexterity AS dexterity, constitution AS constitution, intelligence AS intelligence, wisdom AS wisdom, charisma AS charisma, profficiencyBonus AS profficiencyBonus, armorClass AS armorClass FROM cst391.characters',
+    readCharacterById: 'SELECT id AS characterId, name AS name, playerName AS playerName, height AS height, weight AS weight, backstory AS backstory, race AS race, class AS class, level AS level, strength AS strength, dexterity AS dexterity, constitution AS constitution, intelligence AS intelligence, wisdom AS wisdom, charisma AS charisma, profficiencyBonus AS profficiencyBonus, armorClass AS armorClass FROM cst391.characters WHERE id = ?',  
+    addCharacter: 'INSERT INTO cst391.characters (name, playerName, height, weight, backstory, race, class, level, strength, dexterity, constitution, intelligence, wisdom, charisma, profficiencyBonus, armorClass) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+    removeCharacter: 'DELETE FROM cst391.characters WHERE id = ?',
+    editCharacter: 'UPDATE cst391.characters SET name = ?, playerName = ?, height = ?, weight = ?, backstory = ?, race = ?, class = ?, level = ?, strength = ?, dexterity = ?, constitution = ?, intelligence = ?, wisdom = ?, charisma = ?, profficiencyBonus = ?, armorClass = ? WHERE id = ?'
+}
